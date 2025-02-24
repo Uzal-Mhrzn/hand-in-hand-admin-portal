@@ -3,9 +3,11 @@
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "shims-vue.d.ts"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
+    "composite": true,
+    "allowJs": true,
+    "types": ["node"],
     "target": "esnext", // Adjust based on your project's needs
     "module": "esnext", // This allows the use of import.meta
-    "composite": true,
     "noEmit": true,
     "baseUrl": ".",
     "paths": {
