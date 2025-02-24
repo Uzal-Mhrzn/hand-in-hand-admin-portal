@@ -1,1 +1,4 @@
-# hand-in-hand-admin-portal
+# Admin Portal
+
+#npm install
+#npm run dev
