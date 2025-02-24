@@ -1,4 +1,4 @@
-export const BASE = 'http://ec2-3-85-90-24.compute-1.amazonaws.com:3000'; // import.meta.env.VITE_BASE_URL;
+export const BASE = 'https://hq56d6ir59.execute-api.us-east-1.amazonaws.com/dev'; // import.meta.env.VITE_BASE_URL;
 
 const LOGIN = "/auth/login";
 const EVENTS = "/events";
