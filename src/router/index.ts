@@ -65,11 +65,11 @@ const routes = [
     }
   },
   {
-    path: '/users',
-    name: 'Users',
+    path: '/officers',
+    name: 'Officers',
     component: UsersView,
     meta: {
-      title: 'Users',
+      title: 'Officers',
       requiresAuth:true,
     }
   },
