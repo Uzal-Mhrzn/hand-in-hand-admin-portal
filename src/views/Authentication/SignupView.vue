@@ -2,6 +2,7 @@
 import DefaultAuthCard from '@/components/Auths/DefaultAuthCard.vue'
 import InputGroup from '@/components/Auths/InputGroup.vue'
 
+
 import { ref } from 'vue'
 
 const pageTitle = ref('Sign Up')
