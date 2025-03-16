@@ -105,7 +105,7 @@ const menuGroups = ref([
 </svg>
 `,
         label: 'Officers',
-        route: '/users'
+        route: '/officers'
       },
       {
         icon: `<svg
