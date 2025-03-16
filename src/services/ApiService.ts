@@ -1,3 +1,4 @@
+import router from "@/router";
 import Axios from "./admin-axios-interceptor";
 
 export async function Fetch(url: string, params: any = null, query: any = {}) {
@@ -14,6 +15,8 @@ export async function Fetch(url: string, params: any = null, query: any = {}) {
         .then(response => response.data)
         .catch(error => {
             console.error('Error in GET request:', error);
+            if (error.statusCode == 401) 
+                router.push('/auth/signin');
             throw error;
         });
 }
@@ -25,6 +28,21 @@ export async function Post(url: string, body: any = {}, params: any = null) {
         .then(response => response.data)
         .catch(error => {
             console.error('Error in POST request:', error);
+            if (error.statusCode == 401) 
+                router.push('/auth/signin');
+            throw error;
+        });
+}
+
+export async function Put(url: string, body: any = {}, params: any = null) {
+    console.log(body);
+    // Make the GET request using axios
+    return Axios.put(url, body, params)
+        .then(response => response.data)
+        .catch(error => {
+            console.error('Error in POST request:', error);
+            if (error.statusCode == 401) 
+                router.push('/auth/signin');
             throw error;
         });
 }
@@ -33,6 +51,8 @@ export async function Delete(url: string, params: any =null) {
     return Axios.delete(url, params)
         .catch(error => {
             console.error('Error in DELETE request:', error);
+            if (error.statusCode == 401) 
+                router.push('/auth/signin');
             throw error;
         });
 

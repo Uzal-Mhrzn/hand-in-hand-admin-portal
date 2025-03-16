@@ -1,9 +1,11 @@
-export const BASE = 'https://hq56d6ir59.execute-api.us-east-1.amazonaws.com/dev'; // import.meta.env.VITE_BASE_URL;
+export const BASE = import.meta.env.VITE_BASE_URL;
 
 const LOGIN = "/auth/login";
 const EVENTS = "/events";
-const PHOTOALBUMS = "/events/{id}/album";
+const PHOTOALBUMS = "/events/{id}/albums";
 const OFFICERS = "/officers";
+const ABOUTUS = "/aboutus";
+const CONTACTUS = "/contactus";
 
 //login
 export const apiConstants = {
@@ -11,4 +13,6 @@ export const apiConstants = {
   EVENTS: BASE.concat(EVENTS),
   PHOTOALBUMS: BASE.concat(PHOTOALBUMS),
   OFFICERS: BASE.concat(OFFICERS),
+  ABOUTUS: BASE.concat(ABOUTUS),
+  CONTACTUS: BASE.concat(CONTACTUS),
 }
